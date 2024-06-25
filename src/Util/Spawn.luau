@@ -10,7 +10,7 @@ local function passer(fn, ...): ()
 	thread = hold
 end
 
-local function yield(): never
+local function yield()
 	while true do
 		passer(coroutine.yield())
 	end
